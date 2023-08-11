@@ -1,0 +1,83 @@
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Center the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* Distribute items evenly along the container */
+    width: 50%; /* Adjust the width if needed */
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Menu item styles */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 25%; /* Take up full width of container */
+    padding: 20px 30px; /* Adjust padding */
+    margin: 2px; /* Adjust margin */
+    border-radius: 5px;
+    background-color: #cdeacd; /* Light green background color */
+    cursor: pointer;
+    position: relative; /* Needed for positioning sub-menu */
+    
+}
+
+.sub-menu {
+    display: none; /* Hide the sub-menu by default */
+    position: absolute;
+    background-color: #8dcefa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    z-index: 1; /* Ensure the sub-menu appears above other content */
+}
+
+.menu-item:hover .sub-menu {
+    display: block; /* Show the sub-menu on hover */
+}
+
+.sub-menu li {
+    list-style: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.sub-menu li:hover {
+    background-color: #ee9292; /* Highlight on hover */
+}
