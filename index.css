@@ -1,83 +1,80 @@
-
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background color */
+    color: #333; /* Dark text color */
 }
 
 /* Center the navigation bar */
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3f51b5;
+    background-color: #007bff; /* Blue navigation bar */
     color: white;
-    padding: 10px;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .navbar-menu {
     list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly; /* Distribute items evenly along the container */
-    width: 50%; /* Adjust the width if needed */
 }
 
 .navbar-menu li {
-    margin-right: 20px;
+    display: inline;
+    margin: 0 20px;
 }
 
 .navbar-menu a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
-
-
 
 /* Menu item styles */
 .menu {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-around;
     padding: 20px;
 }
 
 .menu-item {
-    width: 25%; /* Take up full width of container */
-    padding: 20px 30px; /* Adjust padding */
-    margin: 2px; /* Adjust margin */
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px;
     border-radius: 5px;
-    background-color: #cdeacd; /* Light green background color */
+    background-color: #5bc0de; /* Light blue background color */
     cursor: pointer;
-    position: relative; /* Needed for positioning sub-menu */
-    
+    position: relative;
+    text-align: center;
 }
 
 .sub-menu {
-    display: none; /* Hide the sub-menu by default */
+    display: none;
     position: absolute;
-    background-color: #8dcefa;
+    background-color: #d3d3d3; /* Light gray sub-menu background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     top: 100%;
     left: 0;
-    z-index: 1; /* Ensure the sub-menu appears above other content */
+    z-index: 1;
+    text-align: left;
+    width: 100%;
 }
 
 .menu-item:hover .sub-menu {
-    display: block; /* Show the sub-menu on hover */
+    display: block;
 }
 
 .sub-menu li {
     list-style: none;
-    padding: 5px 0;
+    padding: 10px 0;
     cursor: pointer;
 }
 
 .sub-menu li:hover {
-    background-color: #ee9292; /* Highlight on hover */
+    background-color: #6fc9ec; /* Light gray highlight on hover */
 }
